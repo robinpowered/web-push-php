@@ -131,7 +131,7 @@ class WebPush
 	 * @return iterable
 	 * @throws \ErrorException
 	 */
-    public function flush(?int $batchSize = null) : iterable
+    public function flush(?int $batchSize = null) : Generator
     {
         if (empty($this->notifications)) {
 	        yield from [];
