@@ -6,8 +6,8 @@
 
 namespace Minishlink\WebPush;
 
-use Psr\Http\Message\RequestInterface;
-use Psr\Http\Message\ResponseInterface;
+use GuzzleHttp\Message\RequestInterface;
+use GuzzleHttp\Message\ResponseInterface;
 
 /**
  * Standardized response from sending a message
@@ -102,7 +102,7 @@ class MessageSentReport {
 	 * @return string
 	 */
 	public function getEndpoint(): string {
-		return $this->request->getUri()->__toString();
+		return $this->request->getUrl()->__toString();
 	}
 
 	/**
